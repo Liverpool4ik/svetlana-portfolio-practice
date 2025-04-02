@@ -92,9 +92,6 @@ const Photo = styled.img`
 	width: 350px;
 	height: 430px;
 	object-fit: cover;
-
-	@media {
-	}
 `;
 
 // const FlexContainer = styled.div``;
