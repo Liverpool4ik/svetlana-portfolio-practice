@@ -1,0 +1,41 @@
+/* FROM LECTION__3 ===> RETINA DISPLAYS 
+
+
+
+
+
+in FIGMA
+1) to export image for Retina ===>> 
+--- export (2x), 
+--- right three doots(...) ==> Suffix ==> add suffix ==> (@2x)
+
+2) in vsCODE
+
+
+.bg {
+	width: 100%;
+	height: 100vh;
+	background: url(".../../image.jpg") no-repeat center/contain;
+
+	@media (min-resolution: 2dpx) {
+		background: url(".....image@2x.jpg") no-repeat center/contain;
+	}
+
+	@media (min-resolution: 3dpx) {
+		background: url(".....image@3x.jpg") no-repeat center/contain;
+	}
+}
+
+
+
+in chrome Inspector elements (F12) === three dots (...) ===> add device pixel ratio + add device type
+- to turn onn (DPR: 1.0... 2...3) ==> device pixel ratio
+
+// ..... TO SEE WHAT IMAGE IS DOWLOADED (FOR RETINA or not) .....
+===>> network ===>> img (to turn OFF cgeckbox -->> "Disable cache")
+
+======= Если подключаем картинку через тэг "img"
+import cat from '../././.'
+
+
+<img src{cat} srcSet={`${cat2x} 2x, ${cat3x} 3x`} alt="nature"/> */
