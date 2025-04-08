@@ -1,5 +1,6 @@
 import styled, { css } from "styled-components";
 import { theme } from "../../../styles/Theme";
+import { media } from "../../../styles/Media";
 
 //----
 // type MenuPropsType = {
@@ -65,8 +66,8 @@ export const MobileMenu = (props: { menuItems: Array<string> }) => {
 
 const StyledMobileMenu = styled.nav`
 	display: none;
-	@media ${theme.media.tablet} {
-		display: none; //block!!! - was BLOCK - I changed to --none--- when I was doing adaptive main section.... to REMIND - to change on --- display:block --- when main section adaptive will be done: ;
+	@media ${media.tablet} {
+		display: none; //block!!! - was BLOCK - I changed to --none--- when I was doing adaptive main section.... to REMIND - to change on --- display:block --- when main section adaptive will be done
 	}
 `;
 const MobileMenuBurger = styled.div<{ isOpen: boolean }>`

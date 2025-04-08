@@ -4,7 +4,6 @@ import { Skill } from "./skill/Skill";
 import styled from "styled-components";
 import { FlexWrapper } from "../../../components/FlexWrapper";
 import { Container } from "../../../components/Container";
-
 export const Skills = () => {
 	return (
 		<SkillsSection>

@@ -1,5 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 import { theme } from "./Theme";
+import { media } from "./Media";
 
 export const GlobalStyles = createGlobalStyle`
 *,
@@ -40,6 +41,10 @@ body{
 
    section{
       padding: 100px 0;
+
+      @media ${media.mobile} {
+		padding: 80px 0;
+	}
    }
 
    section:nth-of-type(odd){

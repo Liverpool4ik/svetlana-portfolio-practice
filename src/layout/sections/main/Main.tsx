@@ -4,6 +4,8 @@ import photo from "../../../assets/images/mainPage-photo.webp";
 import { FlexWrapper } from "../../../components/FlexWrapper";
 import { Container } from "../../../components/Container";
 import { theme } from "../../../styles/Theme";
+import { media } from "../../../styles/Media";
+import { font } from "../../../styles/AdaptiveFontMixin";
 
 export const Main = () => {
 	return (
@@ -11,7 +13,7 @@ export const Main = () => {
 			<Container>
 				<FlexWrapper
 					alignItems={"center"}
-					justifyCont={"space-between"}
+					justifyCont={"space-around"}
 					wrap={"wrap"}
 				>
 					<TextBlock>
@@ -45,14 +47,22 @@ const SmallText = styled.p`
 `;
 
 const Name = styled.h2`
-	font-family: "Josefin Sans", sans-serif;
+	${font({
+		fontFamily: "'Josefin Sans', sans-serif",
+		fontWeight: 700,
+		FontMax: 50,
+		FontMin: 36,
+	})}
+
+	/* font-family: "Josefin Sans", sans-serif;================??????? ***********
 	font-weight: 700;
-	font-size: 50px;
+	font-size: 50px; */
 	letter-spacing: 0.05em;
 	margin: 20px 0px;
 	span {
 		position: relative;
 		z-index: 0;
+		white-space: nowrap;
 		&::before {
 			content: "";
 			display: inline-block;
@@ -65,16 +75,24 @@ const Name = styled.h2`
 			z-index: -1;
 		}
 	}
+
+	@media ${media.mobile} {
+		margin: 15px 0 22px;
+	}
 `;
 
 const MainTitle = styled.h1`
-	font-weight: 400;
-	font-size: 27px;
+	${font({
+		FontMax: 27,
+		FontMin: 20,
+	})}/* font-weight: 400;
+	font-size: 27px; ===================================??????*********** */
 `;
 
 const PhotoWrapper = styled.div`
 	position: relative;
 	z-index: 0;
+	margin-top: 65px;
 
 	&::before {
 		content: "";
@@ -85,6 +103,13 @@ const PhotoWrapper = styled.div`
 		top: -20px;
 		left: 34px;
 		z-index: -1;
+
+		@media ${media.mobile} {
+			width: 314px;
+			height: 414px;
+			top: -15px;
+			left: 20 px;
+		}
 	}
 `;
 
@@ -92,6 +117,12 @@ const Photo = styled.img`
 	width: 350px;
 	height: 430px;
 	object-fit: cover;
+	margin-right: 20px; //for mobile view --- colored photo frame ==>> (before element)
+
+	@media ${media.mobile} {
+		width: 310px;
+		height: 380px;
+	}
 `;
 
 // const FlexContainer = styled.div``;

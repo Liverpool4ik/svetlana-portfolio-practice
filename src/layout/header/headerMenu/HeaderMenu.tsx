@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { theme } from "../../../styles/Theme";
+import { media } from "../../../styles/Media";
 
 //----
 // type MenuPropsType = {
@@ -62,7 +63,7 @@ const StyledHeaderMenu = styled.nav`
 		display: flex;
 		gap: 30px;
 	}
-	@media ${theme.media.tablet} {
+	@media ${media.tablet} {
 		display: none;
 	}
 `;
