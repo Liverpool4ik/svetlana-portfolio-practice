@@ -48,8 +48,8 @@ const SmallText = styled.p`
 
 const Name = styled.h2`
 	${font({
-		fontFamily: "'Josefin Sans', sans-serif",
-		fontWeight: 700,
+		family: "'Josefin Sans', sans-serif",
+		weight: 700,
 		FontMax: 50,
 		FontMin: 36,
 	})}

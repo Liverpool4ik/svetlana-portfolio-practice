@@ -7,16 +7,16 @@ import { media } from "../styles/Media";
 
 export const SectionTitle = styled.h2`
 	${font({
-		fontFamily: '"Josefin Sans", sans-serif',
+		family: '"Josefin Sans", sans-serif',
 		FontMax: 36,
 		FontMin: 30,
-		fontWeight: 600,
+		weight: 600,
 	})}
 	text-align: center;
 	letter-spacing: 0.5px;
 	margin-bottom: 50px;
-
 	/* font-family: "Josefin Sans", sans-serif;
+   
 	font-weight: 600;
 	font-size: 36px; */
 

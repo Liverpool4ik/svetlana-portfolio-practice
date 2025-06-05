@@ -19,6 +19,7 @@ body{
    -moz-osx-font-smoothing: grayscale;
    color: ${theme.colors.textColor};
    line-height: 1.2;
+   min-width: 360px; 
    
    a{
       text-decoration:none;

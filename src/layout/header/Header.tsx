@@ -1,16 +1,16 @@
-// import React from "react";
-import styled from "styled-components";
+import React from "react";
 import { Logo } from "../../components/logo/Logo";
 import { Container } from "../../components/Container";
 import { FlexWrapper } from "../../components/FlexWrapper";
 import { HeaderMenu } from "./headerMenu/HeaderMenu";
 import { MobileMenu } from "./mobileMenu/MobileMenu";
+import { Stl } from "./Header_Styles";
 
 const headerMenu = ["Home", "Skills", "Works", "Testimony", "Contacts"];
 
-export const Header = () => {
+export const Header: React.FC = () => {
 	return (
-		<StyledHeader>
+		<Stl.Header>
 			<Container>
 				<FlexWrapper justifyCont="space-between" alignItems="center">
 					<Logo />
@@ -18,16 +18,6 @@ export const Header = () => {
 					<MobileMenu menuItems={headerMenu} />
 				</FlexWrapper>
 			</Container>
-		</StyledHeader>
+		</Stl.Header>
 	);
 };
-
-const StyledHeader = styled.header`
-	background-color: rgba(31, 31, 32, 0.9);
-	padding: 20px 0;
-	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
-	z-index: 999;
-`;

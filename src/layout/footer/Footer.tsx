@@ -2,6 +2,8 @@ import styled from "styled-components";
 import { Icon } from "../../components/icon/Icon";
 import { FlexWrapper } from "../../components/FlexWrapper";
 import { theme } from "../../styles/Theme";
+import { media } from "../../styles/Media";
+import { font } from "../../styles/AdaptiveFontMixin";
 
 //
 export const Footer = () => {
@@ -66,9 +68,15 @@ const StyledFooter = styled.footer`
 	min-height: 20vh;
 `;
 const Name = styled.span`
-	font-family: "Josefin Sans", sans-serif;
+	${font({
+		family: "'Josefin Sans', sans-serif",
+		weight: 700,
+		FontMax: 22,
+		FontMin: 16,
+	})}
+	/* font-family: 'Josefin Sans', sans-serif; =====>>> UP --- we use Mixin Variable for adaptive font ---
 	font-weight: 700;
-	font-size: 22px;
+	font-size: 22px; */
 	letter-spacing: 0.14em;
 `;
 const SocialIconItem = styled.li``;

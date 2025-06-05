@@ -16,7 +16,11 @@ export const Projects = () => {
 			<Container>
 				<SectionTitle>My Works</SectionTitle>
 				<TabMenu menuItems={projectTabs} />
-				<FlexWrapper justifyCont={"space-between"} alignItems="flex-start">
+				<FlexWrapper
+					justifyCont={"space-between"}
+					alignItems={"flex-start"}
+					wrap="wrap"
+				>
 					<Project
 						title={"Social Network"}
 						src={imgProj1}
@@ -38,6 +42,7 @@ export const Projects = () => {
 };
 
 const StyledProjects = styled.section`
-	min-height: 100vh;
-	background-color: #05c0f9;
+	${FlexWrapper} {
+		gap: 30px;
+	}
 `;

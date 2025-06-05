@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { Link } from "../../../../components/Link";
 import { theme } from "../../../../styles/Theme";
 import { Button } from "../../../../components/Button";
+import { media } from "../../../../styles/Media";
 
 type ProjectPropsType = {
 	title: string;
@@ -27,36 +28,23 @@ export const Project = (props: ProjectPropsType) => {
 };
 
 const StyledProject = styled.div`
-	max-width: 540px;
-	width: 100%;
-	background-color: ${theme.colors.primaryBg};
+	width: 330px;
+	flex-grow: 1;
+	background-color: ${theme.colors.secondaryBg};
 	${Link} {
 		padding: 10px 0;
 		& + ${Link} {
 			margin-left: 20px;
 		}
 	}
+
+	@media ${media.desktop} {
+		max-width: 540px;
+	}
 `;
 
 const ImageWrapper = styled.div`
 	position: relative;
-
-	&:hover {
-		&::before {
-			content: "";
-			position: absolute;
-			left: 0;
-			right: 0;
-			top: 0;
-			bottom: 0;
-			background: rgba(0, 0, 0, 0.3);
-			backdrop-filter: blur(8px);
-		}
-
-		${Button} {
-			opacity: 1;
-		}
-	}
 
 	${Button} {
 		opacity: 0;
@@ -68,6 +56,36 @@ const ImageWrapper = styled.div`
 		&::before {
 			width: 100%;
 			height: 100%;
+		}
+	}
+
+	&::before {
+		content: "";
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		background: rgba(0, 0, 0, 0.3);
+		backdrop-filter: blur(8px);
+		opacity: 0;
+	}
+
+	@media ${media.tablet} {
+		&::before {
+			opacity: 1;
+		}
+		${Button} {
+			opacity: 1;
+		}
+	}
+
+	&:hover {
+		&::before {
+			opacity: 1;
+		}
+		${Button} {
+			opacity: 1;
 		}
 	}
 `;
